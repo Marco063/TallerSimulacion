@@ -280,6 +280,8 @@ Partial Class Form1
         Me.Controls.Add(Me.TabControl)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(1040, 643)
+        Me.MinimumSize = New System.Drawing.Size(1040, 643)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Simulacion Movimineto Parabolico"
