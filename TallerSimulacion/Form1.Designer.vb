@@ -22,9 +22,10 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TabControl = New System.Windows.Forms.TabControl()
+        Me.Simulacion = New System.Windows.Forms.TabPage()
+        Me.ParedIzquierda = New System.Windows.Forms.PictureBox()
+        Me.Datos = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -40,38 +41,60 @@ Partial Class Form1
         Me.IntervaloViento = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Gravedad = New System.Windows.Forms.TextBox()
-        Me.TabControl1.SuspendLayout()
+        Me.ParedDerecha = New System.Windows.Forms.PictureBox()
+        Me.Techo = New System.Windows.Forms.PictureBox()
+        Me.Piso = New System.Windows.Forms.PictureBox()
+        Me.TabControl.SuspendLayout()
+        Me.Simulacion.SuspendLayout()
+        CType(Me.ParedIzquierda, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ParedDerecha, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Techo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Piso, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TabControl
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(187, 12)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(825, 542)
-        Me.TabControl1.TabIndex = 0
+        Me.TabControl.Controls.Add(Me.Simulacion)
+        Me.TabControl.Controls.Add(Me.Datos)
+        Me.TabControl.Location = New System.Drawing.Point(187, 12)
+        Me.TabControl.Name = "TabControl"
+        Me.TabControl.SelectedIndex = 0
+        Me.TabControl.Size = New System.Drawing.Size(825, 541)
+        Me.TabControl.TabIndex = 0
         '
-        'TabPage1
+        'Simulacion
         '
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(817, 516)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.Simulacion.Controls.Add(Me.Piso)
+        Me.Simulacion.Controls.Add(Me.Techo)
+        Me.Simulacion.Controls.Add(Me.ParedDerecha)
+        Me.Simulacion.Controls.Add(Me.ParedIzquierda)
+        Me.Simulacion.Location = New System.Drawing.Point(4, 22)
+        Me.Simulacion.Name = "Simulacion"
+        Me.Simulacion.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.Simulacion.Size = New System.Drawing.Size(817, 515)
+        Me.Simulacion.TabIndex = 0
+        Me.Simulacion.Text = "Simulacion"
+        Me.Simulacion.UseVisualStyleBackColor = True
         '
-        'TabPage2
+        'ParedIzquierda
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(817, 516)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.ParedIzquierda.BackColor = System.Drawing.Color.Black
+        Me.ParedIzquierda.Location = New System.Drawing.Point(-19, 0)
+        Me.ParedIzquierda.Name = "ParedIzquierda"
+        Me.ParedIzquierda.Size = New System.Drawing.Size(20, 533)
+        Me.ParedIzquierda.TabIndex = 0
+        Me.ParedIzquierda.TabStop = False
+        Me.ParedIzquierda.Visible = False
+        '
+        'Datos
+        '
+        Me.Datos.Location = New System.Drawing.Point(4, 23)
+        Me.Datos.Name = "Datos"
+        Me.Datos.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.Datos.Size = New System.Drawing.Size(817, 514)
+        Me.Datos.TabIndex = 1
+        Me.Datos.Text = "Datos"
+        Me.Datos.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -87,7 +110,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(187, 580)
+        Me.Label2.Location = New System.Drawing.Point(187, 579)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(373, 23)
         Me.Label2.TabIndex = 2
@@ -141,7 +164,7 @@ Partial Class Form1
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(21, 243)
+        Me.Label6.Location = New System.Drawing.Point(21, 242)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(59, 15)
         Me.Label6.TabIndex = 11
@@ -158,7 +181,7 @@ Partial Class Form1
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(21, 178)
+        Me.Label7.Location = New System.Drawing.Point(21, 177)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(19, 15)
         Me.Label7.TabIndex = 9
@@ -205,11 +228,40 @@ Partial Class Form1
         Me.Gravedad.Size = New System.Drawing.Size(132, 20)
         Me.Gravedad.TabIndex = 12
         '
+        'ParedDerecha
+        '
+        Me.ParedDerecha.BackColor = System.Drawing.Color.Black
+        Me.ParedDerecha.Location = New System.Drawing.Point(816, 0)
+        Me.ParedDerecha.Name = "ParedDerecha"
+        Me.ParedDerecha.Size = New System.Drawing.Size(22, 533)
+        Me.ParedDerecha.TabIndex = 1
+        Me.ParedDerecha.TabStop = False
+        Me.ParedDerecha.Visible = False
+        '
+        'Techo
+        '
+        Me.Techo.BackColor = System.Drawing.Color.Black
+        Me.Techo.Location = New System.Drawing.Point(0, -29)
+        Me.Techo.Name = "Techo"
+        Me.Techo.Size = New System.Drawing.Size(821, 31)
+        Me.Techo.TabIndex = 2
+        Me.Techo.TabStop = False
+        Me.Techo.Visible = False
+        '
+        'Piso
+        '
+        Me.Piso.BackColor = System.Drawing.Color.Black
+        Me.Piso.Location = New System.Drawing.Point(0, 500)
+        Me.Piso.Name = "Piso"
+        Me.Piso.Size = New System.Drawing.Size(821, 31)
+        Me.Piso.TabIndex = 3
+        Me.Piso.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1024, 603)
+        Me.ClientSize = New System.Drawing.Size(1024, 604)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.IntervaloViento)
         Me.Controls.Add(Me.Label9)
@@ -225,19 +277,26 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TabControl)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
-        Me.TabControl1.ResumeLayout(False)
+        Me.Text = "Simulacion Movimineto Parabolico"
+        Me.TabControl.ResumeLayout(False)
+        Me.Simulacion.ResumeLayout(False)
+        CType(Me.ParedIzquierda, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ParedDerecha, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Techo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Piso, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TabControl As TabControl
+    Friend WithEvents Simulacion As TabPage
+    Friend WithEvents Datos As TabPage
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -253,4 +312,8 @@ Partial Class Form1
     Friend WithEvents IntervaloViento As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Gravedad As TextBox
+    Friend WithEvents ParedIzquierda As PictureBox
+    Friend WithEvents ParedDerecha As PictureBox
+    Friend WithEvents Techo As PictureBox
+    Friend WithEvents Piso As PictureBox
 End Class
